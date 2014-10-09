@@ -1,0 +1,19 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: root
+  password: password
+  host: 127.0.0.1
+
+development: 
+  <<: *common
+  database: todo_development
+
+test:
+  <<: *common
+  database: todo_test
+
+production: 
+  <<: *common
+  database: todo_production
